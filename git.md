@@ -60,7 +60,9 @@ The following format is expected:
   subsystem: short description (up to 80 symbols, better up to 60)
 
   Long description with references, links, test data and whatever else is
-  needed to explain what, why and how is changed.
+  needed to explain what, why and how is changed (use up to 80-character
+  columns for word-wrapping, any attachment like an application log,
+  external link, utility output is an exception).
 
   Signed-off-by: Your Name <email@example.com>
 
