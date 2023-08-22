@@ -23,7 +23,7 @@ time to deliver it than originally expected.
 ## Priorities
 
 We use a multi-dimensional priority system based on urgency/impact/significance
-(see more on it in the [tags document](tags.md)). Urgent issues are usually
+(see more on it in the [labels document](labels.md)). Urgent issues are usually
 handled quickly, but most of issues are not urgent, some of them can directly
 affect user experience, while some are only visible to developers. Long-term
 it's important to have a balance between tasks that deliver most to users in
