@@ -3,7 +3,7 @@ platform and supporting the Neo core. Our main products are NeoFS and NeoGo.
 
 We operate as an open community, PR and issues are welcome in every repository,
 but to get some understanding of how we work and what we expect from
-contributors take a look at our [git](git.md), [tags](tags.md)
+contributors take a look at our [git](git.md), [labels](labels.md)
 and [project management](project-management.md) guidelines.
 
 # NeoFS

@@ -1,8 +1,8 @@
-# Tags
+# Labels
 
-Each repository has a set of tags (labels) used for task management purposes.
-We have a set of organization-specific tags used by every repository and at the
-same time each particular repository can define a set of tags of its own based
+Each repository has a set of labels used for task management purposes.
+We have a set of organization-specific labels used by every repository and at the
+same time each particular repository can define a set of labels of its own based
 on project-specific needs. All of them need to be described in appropriate
 documents to synchronize on their meaning and usage patterns.
 
@@ -92,7 +92,7 @@ particular issue. See more in [project management document](project-management.m
 - blocked
   The issue can't be immediately solved, either it depends on another issue or
   waits for some additional external input (this MUST be specified in the
-  comment when this tag is added). The tag represents issue state and is
+  comment when this label is added). The label represents issue state and is
   therefore dynamic, can be added/removed when appropriate.
 - config
   Any problem/PR that affects config format MUST have it.
@@ -115,23 +115,23 @@ particular issue. See more in [project management document](project-management.m
 - security
   Anything dealing with security.
 - test
-  Issues about unit tests, this tag is not used in testcase repositories.
+  Issues about unit tests, this label is not used in testcase repositories.
 
 ## Coloring style
 
-Each category has some associated color that is used for all tags in this
-category. Priority tags are a bit different in that they're using a set of
+Each category has some associated color that is used for all labels in this
+category. Priority labels are a bit different in that they're using a set of
 similar colors to signify particular priority.
 
 ## Naming style
 
-In general, lowercase, single-word tags are preferred. But there are ones that
+In general, lowercase, single-word labels are preferred. But there are ones that
 are treated specially by Github and they're used as is, for example "good first
 issue".
 
 ## Persistence
 
-Most of tags are intended to be sticky, once defined they're not likely to
+Most of labels are intended to be sticky, once defined they're not likely to
 change. But since Github's project management abilities are limited, some can
 substitute task state/relation fields and therefore be more dynamic, added and
 removed as appropriate.
