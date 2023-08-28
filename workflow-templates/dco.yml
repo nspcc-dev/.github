@@ -6,4 +6,4 @@ on:
 
 jobs:
   check_commits:
-    uses: nspcc-dev/.github/workflows/dco.yml@master
+    uses: nspcc-dev/.github/.github/workflows/dco.yml@master
