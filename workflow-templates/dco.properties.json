@@ -1,5 +1,5 @@
 {
     "name": "NSPCC DCO check",
     "description": "Check DCO in PR commits.",
-    "iconName": "octicon note",
+    "iconName": "octicon note"
 }
