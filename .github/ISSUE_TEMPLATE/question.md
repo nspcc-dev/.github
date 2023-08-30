@@ -1,6 +1,6 @@
 ---
-name: Questions
-about: Questions about project
+name: Question
+about: Question about the project
 title: ''
 labels: question, triage
 assignees: ''
