@@ -108,6 +108,10 @@ particular issue. See more in [project management document](project-management.m
 - good first issue
   This one is important for Github to be able to offer some entry-level
   problems that are good for the beginners in a particular project.
+- help wanted
+  This one is also Github-specific and allows to signify issues that are not
+  likely to be resolved by NeoSPCC team, external contributors are encouraged
+  to tackle them.
 - performance
   Anything affecting performance metrics.
 - refactoring
@@ -127,7 +131,7 @@ similar colors to signify particular priority.
 
 In general, lowercase, single-word labels are preferred. But there are ones that
 are treated specially by Github and they're used as is, for example "good first
-issue".
+issue" and "help wanted".
 
 ## Persistence
 
