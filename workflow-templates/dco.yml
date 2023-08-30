@@ -1,9 +1,9 @@
-name: NSPCC DCO check
+name: DCO check
 
 on:
   pull_request:
     branches: [ $default-branch ]
 
 jobs:
-  check_commits:
+  dco:
     uses: nspcc-dev/.github/.github/workflows/dco.yml@master
