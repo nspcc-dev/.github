@@ -62,7 +62,10 @@ The following format is expected:
   Long description with references, links, test data and whatever else is
   needed to explain what, why and how is changed (use up to 80-character
   columns for word-wrapping, any attachment like an application log,
-  external link, utility output is an exception).
+  external link, utility output is an exception). It should consist of
+  sentences (or a single sentence) that follow at least some basic
+  punctuation/grammar rules, e.g. start with a capital letter and end
+  with a period.
 
   Signed-off-by: Your Name <email@example.com>
 
