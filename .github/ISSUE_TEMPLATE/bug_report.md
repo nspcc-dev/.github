@@ -35,8 +35,8 @@ assignees: ''
 
 ## Your Environment
 <!-- Include as many relevant details about the environment you experienced the bug in -->
-* Version used:
-* Server setup and configuration:
+* Version of the product used:
+* Server setup and configuration files used:
 * Operating System and version (`uname -a`):
 
 ## Don't forget to add labels!
