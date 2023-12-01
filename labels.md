@@ -114,8 +114,6 @@ particular issue. See more in [project management document](project-management.m
   to tackle them.
 - performance
   Anything affecting performance metrics.
-- refactoring
-  Something that doesn't directly affect user experience.  
 - security
   Anything dealing with security.
 - test
