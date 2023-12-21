@@ -162,11 +162,12 @@ particular issue. See more in [project management document](project-management.m
 
   Used for issues that only (or mostly) require some documentation changes.
 
-- go
+- <language>, like "go" or "python"
 
-  In repositories containing Go code (and we have quite a number of them)
-  used for any Go-specific refactorings usually associated with a new version
-  of the standard library.
+  We use "go" In repositories containing Go code for any Go-specific
+  refactorings usually associated with a new version of the standard library.
+  Similar tags can be used in non-Go repositories for language-specific
+  refactorings.
 
 - good first issue
 
