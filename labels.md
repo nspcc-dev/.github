@@ -6,6 +6,11 @@ same time each particular repository can define a set of labels of its own based
 on project-specific needs. All of them need to be described in appropriate
 documents to synchronize on their meaning and usage patterns.
 
+Forked repositories that are not expected to be maintained for a long time
+(for example, created to add NeoFS support into some product and likely to be
+deleted after the merge to upstream) can inherit labeling scheme from the
+original project and not be converted into NSPCC one.
+
 ## Categories
 
 ### Type
