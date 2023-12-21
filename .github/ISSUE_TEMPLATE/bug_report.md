@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to file an error or unexpected behavior
 title: ''
-labels: bug, triage
+labels: bug, U2
 assignees: ''
 
 ---
@@ -43,4 +43,4 @@ assignees: ''
 - component label (see project-specific labels)
 - `good first issue` if needed
 - does this issue belong to an epic?
-- priority (`P0`-`P4`) if already triaged
+- priorities (`U0`-`U4`/`S0`-`S4`/`I0`-`I4`) if known, bugs are usually more urgent, but less significant
