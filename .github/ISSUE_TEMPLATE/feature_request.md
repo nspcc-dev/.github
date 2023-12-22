@@ -2,7 +2,7 @@
 name: Feature request or enhancement suggestion
 about: Suggest an idea for this project
 title: ''
-labels: enhancement, triage
+labels: feature, I2
 assignees: ''
 
 ---
@@ -21,7 +21,8 @@ assignees: ''
 
 ## Don't forget to add labels!
 - component label (see project-specific labels)
-- issue type (`enhancement`, `refactor`, ...)
-- `good first issue` if needed
+- category (`feature` or `enhancement`)
+- special labels if any (`documentation`, `security`, `blocked`...)
+- `good first issue` if relevant
 - does this issue belong to an epic?
-- priority (`P0`-`P4`) if already triaged
+- priorities (`U0`-`U4`/`S0`-`S4`/`I0`-`I4`) if known, features are usually more impactful, but less urgent

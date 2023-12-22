@@ -6,6 +6,11 @@ same time each particular repository can define a set of labels of its own based
 on project-specific needs. All of them need to be described in appropriate
 documents to synchronize on their meaning and usage patterns.
 
+Forked repositories that are not expected to be maintained for a long time
+(for example, created to add NeoFS support into some product and likely to be
+deleted after the merge to upstream) can inherit labeling scheme from the
+original project and not be converted into NSPCC one.
+
 ## Categories
 
 ### Type
@@ -157,11 +162,12 @@ particular issue. See more in [project management document](project-management.m
 
   Used for issues that only (or mostly) require some documentation changes.
 
-- go
+- <language>, like "go" or "python"
 
-  In repositories containing Go code (and we have quite a number of them)
-  used for any Go-specific refactorings usually associated with a new version
-  of the standard library.
+  We use "go" In repositories containing Go code for any Go-specific
+  refactorings usually associated with a new version of the standard library.
+  Similar tags can be used in non-Go repositories for language-specific
+  refactorings.
 
 - good first issue
 

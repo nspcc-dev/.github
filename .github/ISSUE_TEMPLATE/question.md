@@ -2,7 +2,7 @@
 name: Question
 about: Question about the project
 title: ''
-labels: question, triage
+labels: question, U3
 assignees: ''
 ---
 
