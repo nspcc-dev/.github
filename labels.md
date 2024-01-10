@@ -162,7 +162,7 @@ particular issue. See more in [project management document](project-management.m
 
   Used for issues that only (or mostly) require some documentation changes.
 
-- <language>, like "go" or "python"
+- \<language\>, like "go" or "python"
 
   We use "go" In repositories containing Go code for any Go-specific
   refactorings usually associated with a new version of the standard library.
