@@ -60,3 +60,18 @@ issues get a set of corresponding PR/commit links automatically and nothing
 special is required. However if an issue is closed manually, there MUST be
 a comment describing how and where it's fixed or why it shouldn't/can't be
 fixed.
+
+## Documentation
+
+Each project MUST have a README file describing with brief introduction and
+minimal instructions on how to use it for what purposes.
+
+Each project that has releases MUST have a release instruction in its documents.
+
+Each project with releases MUST have a CHANGELOG describing changes between
+them. This CHANGELOG MUST describe configuration changes if any.
+
+Each project MUST have a LICENSE file with license for its contents.
+
+If project has any runtime dependencies on other projects, there has to be a
+table with compatible versions of this project and its dependencies.
