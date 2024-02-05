@@ -29,6 +29,22 @@ currently developed ones. Some additional branches MAY be present if they
 can't be merged for some reason yet at the same time they have some historical
 or other value.
 
+## Pull requests
+
+All regular changes are processed via pull requests with review requiring at
+least one approval. Direct pushes to the master branch by those who have
+sufficient priviledges to do that can only be done in exceptional cases or
+when some process specifically requires that (like some release processes).
+PRs can be merged without an approval in infrastructure-related repositories
+(like Ansible roles) if they're otherwise conformant to the requirements
+described here and if not merging them can affect production systems.
+
+PRs can have a set of commits if they're related to the same problem (like
+different steps to solve some issue) or the same component/code area (like
+error message typo fix and logic change nearby), however different problems
+(like UI typo fix and build action improvement) shouldn't be mixed in a single
+PR.
+
 ## Commits
 
 The basic unit of any accepted work is a commit (patch). Any work is accepted
