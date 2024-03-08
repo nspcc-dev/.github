@@ -54,12 +54,17 @@ implementing layers above this API, they're called gateways:
 
 ## Applications
 
-[send-fs-neo-org](https://github.com/nspcc-dev/send-fs-neo-org) is a simple
-example of application built on top of NeoFS. It uses [neofs-oauthz](https://github.com/nspcc-dev/neofs-oauthz)
-internally to authenticate users (and issue bearer tokens for them).
+We provide a GitHub action to push anything into NeoFS in
+[gh-push-to-neofs](https://github.com/nspcc-dev/gh-push-to-neofs). There is
+also a more specific one is [gh-push-allure-report-to-neofs](https://github.com/nspcc-dev/gh-push-allure-report-to-neofs)
+that contains some additional code to manage Allure test reports.
 
 [panel-fs-neo-org](https://github.com/nspcc-dev/panel-fs-neo-org) is an example
 of NeoFS data management application.
+
+[send-fs-neo-org](https://github.com/nspcc-dev/send-fs-neo-org) is a simple
+example of application built on top of NeoFS. It uses [neofs-oauthz](https://github.com/nspcc-dev/neofs-oauthz)
+internally to authenticate users (and issue bearer tokens for them).
 
 Popular application forks with NeoFS support added:
  * [distribution](https://github.com/nspcc-dev/distribution)
