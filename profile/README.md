@@ -3,8 +3,8 @@ platform and supporting the Neo core. Our main products are NeoFS and NeoGo.
 
 We operate as an open community, PR and issues are welcome in every repository,
 but to get some understanding of how we work and what we expect from
-contributors take a look at our [git](git.md), [labels](labels.md)
-and [project management](project-management.md) guidelines.
+contributors take a look at our [.github](https://github.com/nspcc-dev/.github)
+repository. Below is an outline of major repositories maintained by us.
 
 # NeoFS
 
