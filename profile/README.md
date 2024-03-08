@@ -42,13 +42,6 @@ They can also be used to run a storage node of your own on public networks
 Maintaining a node instance can be easier with [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs)
 Ansible collection.
 
-### Internals
-
-Deeply in the NeoFS (but some are on the mainnet as well) there are Neo
-contracts residing in the [neofs-contract](https://github.com/nspcc-dev/neofs-contract)
-repository. Generic protobuf NeoFS API has Go binding in [neofs-api-go](https://github.com/nspcc-dev/neofs-api-go)
-([neofs-sdk-go](https://github.com/nspcc-dev/neofs-sdk-go) is built on top of it).
-
 ### Tests
 
 NeoFS test suite (including gateway tests) can be found in [neofs-testcases](https://github.com/nspcc-dev/neofs-testcases).
