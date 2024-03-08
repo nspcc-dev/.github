@@ -52,8 +52,7 @@ NeoFS k6 extension for performance testing is in [xk6-neofs](https://github.com/
 
 NeoFS nodes provide only NeoFS API, but there are additional services
 implementing layers above this API, they're called gateways:
- * [neofs-http-gw](https://github.com/nspcc-dev/neofs-http-gw) implements basic operations with a simple HTTP, can be managed with [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs)
- * [neofs-rest-gw](https://github.com/nspcc-dev/neofs-rest-gw) makes NeoFS API a RESTful one, can be managed with [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs)
+ * [neofs-rest-gw](https://github.com/nspcc-dev/neofs-rest-gw) makes NeoFS API a RESTful one, this is the primary way to integrate with NeoFS for third-party applications (can be managed with [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs))
  * [neofs-s3-gw](https://github.com/nspcc-dev/neofs-s3-gw) implements a compatible subset of Amazon S3 protocol, can be managed with [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs)
 
 ## Applications
