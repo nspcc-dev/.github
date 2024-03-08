@@ -73,8 +73,9 @@ Popular application forks with NeoFS support added:
 
 # NeoGo
 
-Take a look at [neo-go](https://github.com/nspcc-dev/neo-go) repository, it's
-all there.
+NeoGo is a complete Neo protocol implementation, including consensus nodes
+and Go smart contract compiler, take a look at [neo-go](https://github.com/nspcc-dev/neo-go)
+repository, it's all there.
 
 To learn more about Neo smart contract development in go take a look at [neo-go-sc-wrkshp](https://github.com/nspcc-dev/neo-go-sc-wrkshp).
 
