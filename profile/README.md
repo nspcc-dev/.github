@@ -77,7 +77,7 @@ NeoGo is a complete Neo protocol implementation, including consensus nodes
 and Go smart contract compiler, take a look at [neo-go](https://github.com/nspcc-dev/neo-go)
 repository, it's all there. It uses dBFT protocol implementation from [dbft](https://github.com/nspcc-dev/dbft).
 
-To learn more about Neo smart contract development in go take a look at [neo-go-sc-wrkshp](https://github.com/nspcc-dev/neo-go-sc-wrkshp).
+To learn more about Neo smart contract development in Go take a look at [neo-go-sc-wrkshp](https://github.com/nspcc-dev/neo-go-sc-wrkshp).
 
 There is also a Neo performance testing tool, [neo-bench](https://github.com/nspcc-dev/neo-bench).
 
