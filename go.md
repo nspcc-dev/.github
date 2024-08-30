@@ -8,7 +8,7 @@ according to the following conventions:
   the current one. For example, upon the release of Go 1.22, the minimum
   version becomes 1.21 (just like Go itself, release 1.22 makes 1.20
   unsupported).
-* All dependency packages are updated (sometimes, according to project 
+* All direct dependency packages are updated (sometimes, according to project
   requirements, some deprecated package methods may be updated as well.)
 * New Go version features are adapted where they make sense or can improve 
   performance.
