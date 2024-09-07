@@ -1,0 +1,18 @@
+name: Go linter
+
+on:
+  push:
+    branches: [ $default-branch ]
+    paths-ignore:
+      - '**/*.sh'
+      - '**/*.md'
+  pull_request:
+    branches: [ $default-branch ]
+    types: [opened, synchronize]
+    paths-ignore:
+      - '**/*.sh'
+      - '**/*.md'
+
+jobs:
+  lint:
+    uses: nspcc-dev/.github/.github/workflows/go-linter.yml@master
