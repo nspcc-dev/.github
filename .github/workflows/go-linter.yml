@@ -1,0 +1,43 @@
+name: Go linter
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        description: 'Ref to test [default: latest master; examples: 0a4ff9d3e4a9ab432fd5812eb18c98e03b5a7432'
+        required: false
+        default: ''
+      workdir:
+        type: string
+        description: 'Working directory'
+        required: false
+        default: '.'
+
+jobs:
+  linter:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Checkout .github repository
+        uses: actions/checkout@v4
+        with:
+          repository: nspcc-dev/.github
+          path: nspcc-gh
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: ${{ inputs.workdir }}/go.mod
+          cache-dependency-path: ${{ inputs.workdir }}/go.sum
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
+          working-directory: ${{ inputs.workdir }}
+          args: --config=${{ github.workspace }}/nspcc-gh/.golangci.yml
