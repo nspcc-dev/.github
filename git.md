@@ -91,6 +91,7 @@ repository, in this case the subsystem prefix MAY be omitted.
 
 If commit fixes some issue it MUST be mentioned in the message using "fixes
 XXX" (or "closes XXX") notation to automatically close the respective issue.
+These references MAY be placed in the short description (header) if they fit.
 
 Description MUST contain enough data to understand what's going on without
 looking at the linked issues (they're additional data, not the primary thing
