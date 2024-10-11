@@ -40,4 +40,4 @@ jobs:
         with:
           version: latest
           working-directory: ${{ inputs.workdir }}
-          args: --config=${{ github.workspace }}/nspcc-gh/.golangci.yml
+          args: --config=${{ github.workspace }}/nspcc-gh/.golangci.yml ./...
