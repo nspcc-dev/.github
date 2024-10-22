@@ -1,0 +1,5 @@
+{
+    "name": "NeoFS System Tests",
+    "description": "Run NeoFS System tests",
+    "iconName": "octicon bug"
+}
