@@ -210,3 +210,56 @@ Most of labels are intended to be sticky, once defined they're not likely to
 change. But since Github's project management abilities are limited, some can
 substitute task state/relation fields and therefore be more dynamic, added and
 removed as appropriate.
+
+# Example
+
+This section is just informative and gives an example of command set that can
+be used to convert standard GitHub labels (excessive ones are not removed)
+into the scheme described above:
+
+```
+gh label create U0 -c "#ff8c8d" -d "Needs to be resolved immediately"
+gh label create U1 -c "#fea9ab" -d "Critically important to resolve quickly"
+gh label create U2 -c "#fea9ab" -d "Seriously planned"
+gh label create U3 -c "#fed5d6" -d "Regular"
+gh label create U4 -c "#fee5e6" -d "Nothing urgent"
+
+gh label create S0 -c "#9a8bff" -d "Critically significant"
+gh label create S1 -c "#b3a9ff" -d "Highly significant"
+gh label create S2 -c "#cdc5ff" -d "Regular significance"
+gh label create S3 -c "#dcd7ff" -d "Minimally significant"
+gh label create S4 -c "#ebe8ff" -d "Routine"
+
+gh label create I0 -c "#8dfe8b" -d "Maximum impact"
+gh label create I1 -c "#acfea9" -d "High impact"
+gh label create I2 -c "#c6fec5" -d "Regular impact"
+gh label create I3 -c "#d7fed6" -d "Minimal impact"
+gh label create I4 -c "#e8fee6" -d "No visible changes"
+
+gh label edit bug -d "Something isn't working" -c "#c5e2fc"
+gh label edit documentation -d "Improvements or additions to documentation" -c "#fcf9c4"
+gh label edit enhancement -d "Improving existing functionality" -c "#c5e2fc"
+gh label edit "good first issue" -d "Good for newcomers" -c "#cece00"
+gh label edit "help wanted" -d "Extra attention is needed" -c "#cece00"
+gh label edit question -d "Further information is requested" -c "#e5f2fc"
+
+gh label create blocked  -d "Can't be done because of something" -c "#000000"
+gh label create config -d "Configuration format update or breaking change" -c "#fef78e"
+gh label create dependencies -d "Dealing with project dependencies" -c "#fcf9c4"
+gh label create discussion -d "Open discussion of some problem" -c "#e5f2fc"
+gh label create epic -d "A collection of related issues" -c "#8ecbfd"
+gh label create feature -d "Completely new functionality" -c "#c5e2fc"
+gh label create go -d "Go language related" -c "#fcf9c4"
+gh label create performance -d "More of something per second" -c "#fcf9c4"
+gh label create security -d "Affects security" -c "#fef78e"
+gh label create task -d "Something to do" -c "#c5e2fc"
+gh label create test -d "Unit tests" -c "#fcf9c4"
+```
+Additional component/repo-specific colors from the same palette:
+```
+#ffffff
+#ffbf8f #fddbc3
+#ff8db5 #fec4d8
+#8ffefd #c4fdfc
+#ffda8c #feecc4
+```
