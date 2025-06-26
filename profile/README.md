@@ -66,10 +66,8 @@ of NeoFS data management application.
 example of application built on top of NeoFS. It uses [neofs-oauthz](https://github.com/nspcc-dev/neofs-oauthz)
 internally to authenticate users (and issue bearer tokens for them).
 
-Popular application forks with NeoFS support added:
- * [distribution](https://github.com/nspcc-dev/distribution)
- * [rclone](https://github.com/nspcc-dev/rclone)
- * [restic](https://github.com/nspcc-dev/restic)
+[archive-fs-neo-org](https://github.com/nspcc-dev/archive-fs-neo-org) generates
+N3 block archives from NeoFS that can be used for offline synchronization.
 
 # NeoGo
 
@@ -87,7 +85,6 @@ NeoFS nodes, gateways and NeoGo instances can be managed with Ansible using
 roles provided by NSPCC:
  * [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs) contains a role collection for NeoFS node and gateways
  * [ansible-neogo-n3](https://github.com/nspcc-dev/ansible-neogo-n3) contains a role to run NeoGo nodes
- * [ansible-neofs-template](https://github.com/nspcc-dev/ansible-neofs-template) can be used to set up a new private NeoFS network
 
 All services export Prometheus metrics with service-specific data. If you want
 to get some additional data from Neo networks (like balance tracking of FS
