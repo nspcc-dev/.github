@@ -87,7 +87,6 @@ NeoFS nodes, gateways and NeoGo instances can be managed with Ansible using
 roles provided by NSPCC:
  * [ansible-neofs](https://github.com/nspcc-dev/ansible-neofs) contains a role collection for NeoFS node and gateways
  * [ansible-neogo-n3](https://github.com/nspcc-dev/ansible-neogo-n3) contains a role to run NeoGo nodes
- * [ansible-neofs-template](https://github.com/nspcc-dev/ansible-neofs-template) can be used to set up a new private NeoFS network
 
 All services export Prometheus metrics with service-specific data. If you want
 to get some additional data from Neo networks (like balance tracking of FS
