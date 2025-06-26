@@ -66,11 +66,6 @@ of NeoFS data management application.
 example of application built on top of NeoFS. It uses [neofs-oauthz](https://github.com/nspcc-dev/neofs-oauthz)
 internally to authenticate users (and issue bearer tokens for them).
 
-Popular application forks with NeoFS support added:
- * [distribution](https://github.com/nspcc-dev/distribution)
- * [rclone](https://github.com/nspcc-dev/rclone)
- * [restic](https://github.com/nspcc-dev/restic)
-
 # NeoGo
 
 NeoGo is a complete Neo protocol implementation, including consensus nodes
