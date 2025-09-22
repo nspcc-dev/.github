@@ -36,7 +36,7 @@ jobs:
           cache-dependency-path: ${{ inputs.workdir }}/go.sum
 
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v6
+        uses: golangci/golangci-lint-action@v8
         with:
           version: latest
           working-directory: ${{ inputs.workdir }}
