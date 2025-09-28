@@ -1,5 +1,6 @@
 # This file contains all available configuration options
 # with their default values.
+version: "2"
 
 # options for analysis running
 run:
@@ -13,29 +14,35 @@ run:
 output:
   # colored-line-number|line-number|json|tab|checkstyle|code-climate, default is "colored-line-number"
   formats:
-    - format: tab
-
-# all available settings of specific linters
-linters-settings:
-  exhaustive:
-    # indicates that switch statements are to be considered exhaustive if a
-    # 'default' case is present, even if all enum members aren't listed in the
-    # switch
-    default-signifies-exhaustive: true
-  gofmt:
-    rewrite-rules:
-      - pattern: 'interface{}'
-        replacement: 'any'
-  gomodguard:
-    blocked:
-      modules:
-        - github.com/pkg/errors:
-            reason: "Obsolete after the 1.13 release; use the standard `errors` package"
-  revive:
-    rules:
-      - name: duplicated-imports
+    tab:
+      path: stdout
+      colors: false
 
 linters:
+  # all available settings of specific linters
+  settings:
+    exhaustive:
+      # indicates that switch statements are to be considered exhaustive if a
+      # 'default' case is present, even if all enum members aren't listed in the
+      # switch
+      default-signifies-exhaustive: true
+    gomodguard:
+      blocked:
+        modules:
+          - github.com/pkg/errors:
+              reason: Obsolete after the 1.13 release; use the standard `errors` package
+    revive:
+      rules:
+        - name: duplicated-imports
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
   enable:
     # mandatory linters
     - govet
@@ -43,17 +50,15 @@ linters:
 
     # some default golangci-lint linters
     - errcheck
-    - gosimple
     - godot
     - ineffassign
     - staticcheck
-    - typecheck
     - unused
 
     # extra linters
     # - goconst
-    # - goerr113
-    # - gomnd
+    # - err113
+    # - mnd
     # - nonamedreturns
     # - unparam
     - bidichk
@@ -64,20 +69,25 @@ linters:
     - durationcheck
     - errorlint
     - exhaustive
-    - gofmt
-    - goimports
     - gomodguard
     - intrange
     - misspell
     - predeclared
     - reassign
     - whitespace
-  disable-all: true
-  fast: false
+  default: none
 
-issues:
-  include:
-    - EXC0002 # should have a comment
-    - EXC0003 # test/Test ... consider calling this
-    - EXC0004 # govet
-    - EXC0005 # C-style breaks
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    gofmt:
+      rewrite-rules:
+        - pattern: interface{}
+          replacement: any
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
