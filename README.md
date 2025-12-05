@@ -20,3 +20,4 @@ organization are also stored here.
   assignments, PR discussions, issue closure, and documentation.
 - [Contributing](CONTRIBUTING.md) - We welcome contributions! Please take a 
   look if you have suggestions, corrections, or documents to add. 
+- [GitHub](gh.md) - GitHub-specific development practices and policies.
