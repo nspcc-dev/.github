@@ -55,6 +55,9 @@ linters:
     - staticcheck
     - unused
 
+    # code improvements suggestion
+    - modernize
+  
     # extra linters
     # - goconst
     # - err113
