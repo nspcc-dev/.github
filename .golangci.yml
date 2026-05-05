@@ -26,11 +26,10 @@ linters:
       # 'default' case is present, even if all enum members aren't listed in the
       # switch
       default-signifies-exhaustive: true
-    gomodguard:
+    gomodguard_v2:
       blocked:
-        modules:
-          - github.com/pkg/errors:
-              reason: Obsolete after the 1.13 release; use the standard `errors` package
+        - module: github.com/pkg/errors
+          reason: Obsolete after the 1.13 release; use the standard `errors` package
     revive:
       rules:
         - name: duplicated-imports
@@ -72,7 +71,7 @@ linters:
     - durationcheck
     - errorlint
     - exhaustive
-    - gomodguard
+    - gomodguard_v2
     - intrange
     - misspell
     - predeclared
