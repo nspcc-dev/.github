@@ -121,3 +121,11 @@ force-pushing the result.
 Merged branches MUST have no conflicts with the current master. If there are
 any conflicts author is expected to fix them by rebasing and force-pushing the
 branch.
+
+The requirement to use merge commits is relaxed for AI-generated branches and
+PRs (Copilot). These tools can't structure changes properly and also can't
+rebase changes, so their branches usually contain a lot of dirty commits with
+bad descriptions. Since these tools are mostly used for small things and since
+the changeset needs to be adjusted anyway the easiest way to handle these
+PRs is to use squash&merge GitHub function, therefore it's explicitly allowed
+for cases like this.
