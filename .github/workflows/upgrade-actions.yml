@@ -1,0 +1,59 @@
+name: Upgrade action dependencies
+on:
+  schedule:
+    - cron: '47 13 * * 4'
+  workflow_dispatch:
+
+jobs:
+  define-matrix:
+    name: Define the set of repositories to update
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.repos.outputs.repos }}
+    steps:
+      - name: List nspcc-dev repositories
+        id: repos
+        run: |
+          echo repos=["$(gh repo list nspcc-dev --no-archived --limit 100 --json name --jq 'map(.name) | @csv')"] >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.SAMI_GHACTION_UPGRADE_TOKEN }}
+
+  update-deps:
+    name: Update action dependencies
+    needs: define-matrix
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        repo: ${{ fromJson(needs.define-matrix.outputs.repos) }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Clone repository
+        run: git clone https://github.com/nspcc-dev/${{matrix.repo}}.git
+      - name: Upgrade, commit and push changes
+        run: |
+          cd ${{matrix.repo}}
+          for action in "actions/checkout" "actions/setup-go" "golangci/golangci-lint-action" "codecov/codecov-action"; do
+            latestVersion="$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2026-03-10" /repos/${action}/releases/latest | jq .tag_name -r)"
+            latestVersion="${latestVersion%%.*}"
+            echo "Updating ${action} to the latest ${latestVersion}..."
+            find . -type f -name "*.yml" -print0 | xargs -0 sed -i -e "s|${action}@.*|${action}@${latestVersion}|g"
+            echo "Done."
+          done
+          if [[ $(git diff) ]]; then
+            echo "Committing git diff..."
+            git diff
+            git checkout -b upgrade-actions
+            git config user.name "Sami"
+            git config user.email "sami@nspcc.ru"
+            git add .github
+            git commit -s -m ".github: upgrade Actions" -m "Upgrade GitHub Actions to the latest version."
+            git remote set-url origin https://sami-nspcc:"${GH_TOKEN}"@github.com/nspcc-dev/${{matrix.repo}}.git
+            git push --set-upstream origin upgrade-actions
+            gh pr create --base master --head upgrade-actions --title ".github: upgrade Actions" --body "Upgrade GitHub Actions to the latest version."
+          else
+            echo "Everything is up to date."
+          fi
+          cd ../
+        env:
+          GH_TOKEN: ${{ secrets.SAMI_GHACTION_UPGRADE_TOKEN }}
