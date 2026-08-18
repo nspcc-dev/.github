@@ -30,7 +30,7 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v5
         with:
-          repository: https://github.com/nspcc-dev/${{matrix.repo}}.git
+          repository: nspcc-dev/${{matrix.repo}}
           token: ${{ secrets.SAMI_GHACTION_UPGRADE_TOKEN }}
 
       - name: Checkout upgrade-actions branch
