@@ -26,6 +26,10 @@ jobs:
     strategy:
       matrix:
         repo: ${{ fromJson(needs.define-matrix.outputs.repos) }}
+        exclude:
+          - repo: bbolt
+          - repo: saml
+          - repo: dot-hugo
     steps:
       - name: Clone repo
         uses: actions/checkout@v5
