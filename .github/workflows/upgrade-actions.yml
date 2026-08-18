@@ -28,7 +28,7 @@ jobs:
         repo: ${{ fromJson(needs.define-matrix.outputs.repos) }}
     steps:
       - name: Clone repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           repository: nspcc-dev/${{matrix.repo}}
           token: ${{ secrets.SAMI_GHACTION_UPGRADE_TOKEN }}
