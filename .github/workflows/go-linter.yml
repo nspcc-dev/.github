@@ -30,7 +30,7 @@ jobs:
           repository: nspcc-dev/.github
           path: nspcc-gh
 
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         with:
           go-version-file: ${{ inputs.workdir }}/go.mod
           cache-dependency-path: ${{ inputs.workdir }}/go.sum
