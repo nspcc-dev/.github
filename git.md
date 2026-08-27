@@ -122,6 +122,8 @@ Merged branches MUST have no conflicts with the current master. If there are
 any conflicts author is expected to fix them by rebasing and force-pushing the
 branch.
 
+### Agentic PRs
+
 The requirement to use merge commits is relaxed for AI-generated branches and
 PRs (Copilot). These tools can't structure changes properly and also can't
 rebase changes, so their branches usually contain a lot of dirty commits with
@@ -129,3 +131,13 @@ bad descriptions. Since these tools are mostly used for small things and since
 the changeset needs to be adjusted anyway the easiest way to handle these
 PRs is to use squash&merge GitHub function, therefore it's explicitly allowed
 for cases like this.
+
+When merging such PRs make sure you have a good description for the resulting
+commit:
+ * drop log URL references if the issue at hand, PR and all discussions are
+   public on GitHub anyway
+ * add "Co-authored-by:" line properly (with real name and e-mail, not GitHub
+   account and its magic automatic addresses) identifying the person driving
+   agent session
+ * ensure the original issue is mentioned
+ * add technical details from PR description as appropriate
