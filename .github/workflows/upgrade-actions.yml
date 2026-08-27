@@ -42,7 +42,7 @@ jobs:
 
       - name: Upgrade, commit and push changes
         run: |
-          for action in "actions/checkout" "actions/setup-go" "golangci/golangci-lint-action" "codecov/codecov-action"; do
+          for action in "actions/checkout" "actions/setup-go" "golangci/golangci-lint-action" "codecov/codecov-action" "actions/upload-artifact"; do
             latestVersion="$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2026-03-10" /repos/${action}/releases/latest | jq .tag_name -r)"
             latestVersion="${latestVersion%%.*}"
             echo "Updating ${action} to the latest ${latestVersion}..."
