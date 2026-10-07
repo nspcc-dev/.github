@@ -29,8 +29,8 @@ definition of the core NeoFS API, that'd be [neofs-api](https://github.com/nspcc
 The easiest way to get a NeoFS instance with complete API support for initial
 testing or application development is [neofs-aio](https://github.com/nspcc-dev/neofs-aio).
 
-More complex scenarios with multiple nodes can be tested with [neofs-dev-env](https://github.com/nspcc-dev/neofs-dev-env/),
-but it's more intended for people developing NeoFS itself.
+You can also run more complex networks following [neofs-node](https://github.com/nspcc-dev/neofs-node)
+network setup documentation or using its dev-env.
 
 ## Nodes and CLI
 
