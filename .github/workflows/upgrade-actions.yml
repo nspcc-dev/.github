@@ -30,6 +30,7 @@ jobs:
           - repo: bbolt
           - repo: saml
           - repo: dot-hugo
+          - repo: archive-fs-neo-org
     steps:
       - name: Clone repo
         uses: actions/checkout@v7
